@@ -1,6 +1,6 @@
 <?php
 
-class CT310Hospital_Controller extends Controller {
+class CT310Hospital_Controller extends Controller_Template {
 
     //TODO: directs you to the homepage (serve up the homepage view)
     public function action_index() {
