@@ -1,6 +1,6 @@
 <?php
 
-class CT310Hospital_Controller extends Controller {
+class Controller_Hospital extends Controller {
 
     //TODO: directs you to the homepage (serve up the homepage view)
     public function action_home() {
