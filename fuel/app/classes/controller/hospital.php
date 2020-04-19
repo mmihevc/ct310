@@ -13,7 +13,11 @@ class Controller_Hospital extends Controller {
 
     //TODO: directs you to the about page (serve up the about page view)
     public function action_about() {
-
+      $view = View::forge('hospitalviews/about');
+      $view->contents = View::forge('hospitalviews/template');
+      $view->title = 'About Us';
+      $view->hospital_css = 'hospital.css';
+      return $view;
     }
 
     //TODO: directs you to a page listing the hospitals, it would be smart to limit the data flow using pagination or something like that...
