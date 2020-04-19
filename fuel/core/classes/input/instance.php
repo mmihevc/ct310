@@ -190,7 +190,7 @@ class Input_Instance
 			$uri = substr($uri, strlen($index_file));
 		}
 
-		// When index.php? is used and the config is set wrong, lets just
+		// When about.php? is used and the config is set wrong, lets just
 		// be nice and help them out.
 		if ($index_file and strncmp($uri, '?/', 2) === 0)
 		{
@@ -202,13 +202,13 @@ class Input_Instance
 		if (strpos($uri, '?') !== false)
 		{
 			// log this issue
-			\Log::write(\Fuel::L_DEBUG, 'Your rewrite rules are incorrect, change "index.php?/$1 [QSA,L]" to "index.php/$1 [L]"!');
+			\Log::write(\Fuel::L_DEBUG, 'Your rewrite rules are incorrect, change "about.php?/$1 [QSA,L]" to "about.php/$1 [L]"!');
 
 			// reset $_GET
 			$_GET = array();
 
 			// lets split the URI up in case it contains a ?.  This would
-			// indicate the server requires 'index.php?'
+			// indicate the server requires 'about.php?'
 			preg_match('#(.*?)\?(.*)#i', $uri, $matches);
 
 			// If there are matches then lets set everything correctly

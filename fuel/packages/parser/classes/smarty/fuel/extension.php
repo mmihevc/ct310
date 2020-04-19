@@ -82,7 +82,7 @@ class Smarty_Fuel_Extension
 
 	/**
 	 * Provides the url() functionality.  Generates a full url (including
-	 * domain and index.php).
+	 * domain and about.php).
 	 *
 	 * Usage: {url uri='' params=[name=>$value]}
 	 *

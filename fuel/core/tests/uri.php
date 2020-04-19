@@ -45,9 +45,9 @@ class Test_Uri extends TestCase
 
 		$prefix = Uri::create('');
 
-		Config::set('index_file', 'index.php');
+		Config::set('index_file', 'about.php');
 		$output = Uri::create('controller/method');
-		$expected = $prefix."index.php/controller/method";
+		$expected = $prefix."about.php/controller/method";
 		$this->assertEquals($expected, $output);
 
 		Config::set('index_file', '');
@@ -99,10 +99,10 @@ class Test_Uri extends TestCase
 		$this->assertEquals($expected, $output);
 
 		Config::set('base_url', 'http://example.com/');
-		Config::set('index_file', 'index.php');
+		Config::set('index_file', 'about.php');
 
 		$output = Uri::base();
-		$expected = 'http://example.com/index.php/';
+		$expected = 'http://example.com/about.php/';
 		$this->assertEquals($expected, $output);
 
 		$output = Uri::base(false);
