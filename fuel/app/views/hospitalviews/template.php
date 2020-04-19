@@ -13,7 +13,7 @@
       <a href="hospitalList.php">Hospital List</a>
       <a href="drgList.php">DRG List</a>
       <a href="hospitalDetails.php">Hospital Details</a>
-      <a href="drgDetails.php"></a>
+      <a href="drgDetails.php">DRG Details</a>
     </div>
 
   </body>
