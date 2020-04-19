@@ -80,7 +80,7 @@ class Router
 
 	/**
 	 * Does reverse routing for a named route.  This will return the FULL url
-	 * (including the base url and index.php).
+	 * (including the base url and about.php).
 	 *
 	 * WARNING: Reverse routing with routes that contains a regex is still
 	 * experimental. The simple ones work, but complex ones might fail!

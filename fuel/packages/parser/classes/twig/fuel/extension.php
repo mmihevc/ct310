@@ -174,7 +174,7 @@ class Twig_Fuel_Extension extends Twig_Extension
 
 	/**
 	 * Provides the url() functionality.  Generates a full url (including
-	 * domain and index.php).
+	 * domain and about.php).
 	 *
 	 * @param   string  URI to make a full URL for (or name of a named route)
 	 * @param   array   Array of named params for named routes

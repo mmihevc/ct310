@@ -224,7 +224,7 @@ class Uri
 	/**
 	 * Gets the base URL, including the index_file if wanted.
 	 *
-	 * @param   bool    $include_index  Whether to include index.php in the URL
+	 * @param   bool    $include_index  Whether to include about.php in the URL
 	 * @return  string
 	 */
 	public static function base($include_index = true)

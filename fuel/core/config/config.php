@@ -64,7 +64,7 @@ return array(
 	 *  URL Rewriting
 	 * -------------------------------------------------------------------------
 	 *
-	 *  Set this to 'index.php' if you don't use URL rewriting.
+	 *  Set this to 'about.php' if you don't use URL rewriting.
 	 *
 	 */
 

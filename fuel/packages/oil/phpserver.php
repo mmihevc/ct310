@@ -33,5 +33,5 @@ else
 {
 	// route requests though the normal path
 	$_SERVER['SCRIPT_NAME'] = __FILE__;
-	include $_SERVER['DOCUMENT_ROOT'].'/index.php';
+	include $_SERVER['DOCUMENT_ROOT'].'/about.php';
 }

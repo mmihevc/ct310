@@ -100,7 +100,7 @@ class Cli
 	 * number.
 	 *
 	 * Named options must be in the following formats:
-	 * php index.php user -v --v -name=John --name=John
+	 * php about.php user -v --v -name=John --name=John
 	 *
 	 * @param   string|int  $name     the name of the option (int if unnamed)
 	 * @param   mixed       $default  value to return if the option is not defined
@@ -141,7 +141,7 @@ class Cli
 	 * Get input from the shell, using readline or the standard STDIN
 	 *
 	 * Named options must be in the following formats:
-	 * php index.php user -v --v -name=John --name=John
+	 * php about.php user -v --v -name=John --name=John
 	 *
 	 * @param	string|int	$prefix	the name of the option (int if unnamed)
 	 * @return	string
