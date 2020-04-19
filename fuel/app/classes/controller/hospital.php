@@ -1,10 +1,14 @@
 <?php
 
-class CT310Hospital_Controller extends Controller_Template {
+class CT310Hospital_Controller extends Controller {
 
     //TODO: directs you to the homepage (serve up the homepage view)
-    public function action_index() {
-
+    public function action_home() {
+      $view = View::forge('hospitalviews/home');
+      $view->contents = View::forge('hospitalviews/template');
+      $view->title = 'Home Page';
+      $view->hospital_css = 'hospital.css';
+      return $view;
     }
 
     //TODO: directs you to the about page (serve up the about page view)
