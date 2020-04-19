@@ -1,0 +1,33 @@
+.topnav {
+  width: auto;
+  height: auto;
+  background-color: black;
+}
+
+.topnav a {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  padding: 20px;
+  text-align: center;
+}
+
+.topnav a:hover {
+  color: #29524A;
+}
+
+.topnav a:visited {
+  color: #102542;
+}
+
+h1 {
+  text-align: center;
+}
+
+img {
+  height: 500px;
+  width: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
