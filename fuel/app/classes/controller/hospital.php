@@ -24,7 +24,12 @@ class Controller_Hospital extends Controller {
     //https://www.myprogrammingtutorials.com/create-pagination-with-php-and-mysql.html
     //You could do something like this with a file, but you could also just load all the data into a database for easier access
     public function action_hospital_list() {
-
+        //$hospital_data = hospitalModel::get_hospitals(0,10);
+      $view = View::forge('hospitalviews/hospital_list');
+      $view->contents = View::forge('hospitalviews/template');
+      $view->title = 'Hospital List';
+      $view->hospital_css = 'hospital.css';
+      return $view;
     }
 
     //TODO: directs you to a page listing the msdrgs, maybe do some pagination similar to the hospital list
