@@ -38,7 +38,7 @@
       </tr>
       <tr>
         <th>Arif Biyik</th>
-        <td> <img src="https://www.cs.colostate.edu:4444/~abiyik/ct310/assets/img/Arif.png" ></td>
+        <td> <img src="https://www.cs.colostate.edu:4444/~abiyik/local_html_ct310/assets/img/Arif.png" ></td>
         <td>Arif is a senior at Colorado State University and is a Applited Computing Technology major.
             His love for computers started at a young age with coding with small video game projects. He
             is on the Colorado State University Soccer team and plans to pursue a career in Web Design or 
