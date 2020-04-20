@@ -38,8 +38,13 @@
       </tr>
       <tr>
         <th>Arif Biyik</th>
-        <td>image here</td>
-        <td>bio here</td>
+        <td> <img src="https://www.cs.colostate.edu:4444/~abiyik/ct310/assets/img/Arif.png" ></td>
+        <td>Arif is a senior at Colorado State University and is a Applited Computing Technology major.
+            His love for computers started at a young age with coding with small video game projects. He
+            is on the Colorado State University Soccer team and plans to pursue a career in Web Design or 
+            Software Development. He was born in Istanbul, Turkey and moved to San Diego when he was 6.
+            Then he lived in Washington, DC and Miami. He is a huge fan of soccer, snowboarding and any
+            outdoor activities. </td>
         <td class="link">deployment link</td>
       </tr>
     </table>
