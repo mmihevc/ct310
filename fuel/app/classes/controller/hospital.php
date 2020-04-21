@@ -1,4 +1,5 @@
 <?php
+use \Model\HospitalModel;
 
 class Controller_Hospital extends Controller {
 
@@ -24,11 +25,12 @@ class Controller_Hospital extends Controller {
     //https://www.myprogrammingtutorials.com/create-pagination-with-php-and-mysql.html
     //You could do something like this with a file, but you could also just load all the data into a database for easier access
     public function action_hospital_list() {
-        //$hospital_data = hospitalModel::get_hospitals(0,10);
+       $hospital_data = HospitalModel::get_hospitals(0,10);
       $view = View::forge('hospitalviews/hospital_list');
       $view->contents = View::forge('hospitalviews/template');
       $view->title = 'Hospital List';
       $view->hospital_css = 'hospital.css';
+      $view->hospital_data = $hospital_data;
       return $view;
     }
 
