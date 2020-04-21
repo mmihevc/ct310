@@ -252,14 +252,14 @@ background-color: #e6bf99;
             <tr>
               <th>Name</th>
               <th>State</th>
-              <th>MPN</th<
+              <th>MPN</th>
             </tr>
             </thead>
             <tbody>
               <?php
               foreach($hospital_data as $row){
                 echo "<tr>\n";
-                $l = Uri::base(). "index.php/hospital/hospital_list/" .$row["Provider_Name"];
+                $l = Uri::base(). "index.php/hospital/hospital_details.php?hospital_name=" .$row["Provider_Name"] ."&hospital_id=".$row["Provider_Id"];
                 echo "<td><a href ='$l'>" . $row["Provider_Name"] . "</a></td>";
                 echo "<td>" . $row["Provider_State"] . "</td>";
                 echo "<td>" . $row["Provider_Id"] . "</td>";
