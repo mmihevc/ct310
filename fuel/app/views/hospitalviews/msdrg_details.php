@@ -16,7 +16,7 @@
         <th>Average Medicare Payments</th>
       </tr>
       <?php
-        foreach ($dsrg_data as $row) {
+        foreach ($drg_data as $row) {
           echo "<tr>";
           echo "<td>" . $row['Provider_Id'] . "</td>";
           echo "<td>" . $row['Provider_Name'] . "</td>";
