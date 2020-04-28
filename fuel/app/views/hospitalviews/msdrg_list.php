@@ -4,10 +4,6 @@
     <meta charset="utf-8">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/css/theme.default.min.css"> -->
     <style>
-    /*************
-      Blue Theme
-      *************/
-      /* overall */
       .tablesorter-blue {
       width: 100%;
       background-color: #fff;
@@ -23,7 +19,6 @@
       border-width: 0 1px 1px 0;
       }
 
-      /* header */
       .tablesorter-blue th,
       .tablesorter-blue thead td {
       font: 12px/18px Arial, Sans-serif;
@@ -42,12 +37,7 @@
       }
       .tablesorter-blue .header,
       .tablesorter-blue .tablesorter-header {
-      /* black (unsorted) double arrow */
       background-image: url(data:image/gif;base64,R0lGODlhFQAJAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAkAAAIXjI+AywnaYnhUMoqt3gZXPmVg94yJVQAAOw==);
-      /* white (unsorted) double arrow */
-      /* background-image: url(data:image/gif;base64,R0lGODlhFQAJAIAAAP///////yH5BAEAAAEALAAAAAAVAAkAAAIXjI+AywnaYnhUMoqt3gZXPmVg94yJVQAAOw==); */
-      /* image */
-      /* background-image: url(images/black-unsorted.gif); */
       background-repeat: no-repeat;
       background-position: center right;
       padding: 4px 18px 4px 4px;
@@ -58,14 +48,12 @@
       .tablesorter-blue .tablesorter-headerSortUp,
       .tablesorter-blue .tablesorter-headerAsc {
       background-color: #9fbfdf;
-      /* black asc arrow */
       background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjI8Bya2wnINUMopZAQA7);
       }
       .tablesorter-blue .headerSortDown,
       .tablesorter-blue .tablesorter-headerSortDown,
       .tablesorter-blue .tablesorter-headerDesc {
       background-color: #8cb3d9;
-      /* black desc arrow */
       background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjB+gC+jP2ptn0WskLQA7);
       }
       .tablesorter-blue thead .sorter-false {
@@ -74,16 +62,13 @@
       padding: 4px;
       }
 
-      /* tfoot */
       .tablesorter-blue tfoot .tablesorter-headerSortUp,
       .tablesorter-blue tfoot .tablesorter-headerSortDown,
       .tablesorter-blue tfoot .tablesorter-headerAsc,
       .tablesorter-blue tfoot .tablesorter-headerDesc {
-      /* remove sort arrows from footer */
       background-image: none;
       }
 
-      /* tbody */
       .tablesorter-blue td {
       color: #3d3d3d;
       background-color: #fff;
@@ -116,7 +101,6 @@
       background-image: url('data:image/gif;base64,R0lGODlhFAAUAKEAAO7u7lpaWgAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQBCgACACwAAAAAFAAUAAACQZRvoIDtu1wLQUAlqKTVxqwhXIiBnDg6Y4eyx4lKW5XK7wrLeK3vbq8J2W4T4e1nMhpWrZCTt3xKZ8kgsggdJmUFACH5BAEKAAIALAcAAAALAAcAAAIUVB6ii7jajgCAuUmtovxtXnmdUAAAIfkEAQoAAgAsDQACAAcACwAAAhRUIpmHy/3gUVQAQO9NetuugCFWAAAh+QQBCgACACwNAAcABwALAAACE5QVcZjKbVo6ck2AF95m5/6BSwEAIfkEAQoAAgAsBwANAAsABwAAAhOUH3kr6QaAcSrGWe1VQl+mMUIBACH5BAEKAAIALAIADQALAAcAAAIUlICmh7ncTAgqijkruDiv7n2YUAAAIfkEAQoAAgAsAAAHAAcACwAAAhQUIGmHyedehIoqFXLKfPOAaZdWAAAh+QQFCgACACwAAAIABwALAAACFJQFcJiXb15zLYRl7cla8OtlGGgUADs=') !important;
       }
 
-      /* Zebra Widget - row alternating colors */
       .tablesorter-blue tbody tr.odd > td {
       background-color: #ebf2fa;
       }
@@ -124,7 +108,6 @@
       background-color: #fff;
       }
 
-      /* Column Widget - column sort colors */
       .tablesorter-blue td.primary,
       .tablesorter-blue tr.odd td.primary {
       background-color: #99b3e6;
@@ -147,7 +130,6 @@
       background-color: #ebf0fa;
       }
 
-      /* caption */
       .tablesorter-blue > caption {
       background-color: #fff;
       }
