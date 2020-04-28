@@ -12,10 +12,6 @@
       <a href="about.php">About Us</a>
       <a href="hospital_list.php">Hospital List</a>
       <a href="msdrg_list.php">DRG List</a>
-      <a href="hospital_details.php">Hospital Details</a> 
-      <a href="drgDetails.php"></a>
     </div>
-
   </body>
 </html>
-
