@@ -57,7 +57,7 @@ class Controller_Hospital extends Controller {
     public function action_hospital_details() {
         if(isset($_GET["hospital_id"])){
             $hospital_id = $_GET["hospital_id"];
-            $everything_data = HospitalModel::get_everything(0,10, $hospital_id);
+            $everything_data = HospitalModel::get_everything($hospital_id);
             $view = View::forge('hospitalviews/hospital_details');
             $view->contents = View::forge('hospitalviews/template');
             $view->title = 'Hospital Details';
