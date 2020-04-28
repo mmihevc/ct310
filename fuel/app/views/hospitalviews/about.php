@@ -20,7 +20,7 @@
           girls involved as a teacher. She enjoys long walks with her dog Razmataz and
           participating in any outdoor adventure possible.
         </td>
-        <td class="link">deployment link</td>
+        <td class="link"><a href="https://www.cs.colostate.edu:4444/~mmihevc/ct310/index/hospital/home.php">Deploy</a></td>
       </tr>
       <tr>
         <th>Jackie Clotfelter</th>
@@ -34,18 +34,18 @@
           of California, her family moved to Colorado when she was a young age to pursue their love for
           the skiing and the outdoors. She loves plants, pugs, and painting and despises being cold.
         </td>
-        <td class="link">deployment link</td>
+        <td class="link"><a href="https://www.cs.colostate.edu:4444/~jclotfel/ct310/index/hospital/home.php">Deploy</a></td>
       </tr>
       <tr>
         <th>Arif Biyik</th>
-        <td> <img src="https://www.cs.colostate.edu:4444/~abiyik/ct310/assets/img/Arif.png" ></td>
+        <td><img src="https://www.cs.colostate.edu:4444/~abiyik/ct310/assets/img/Arif.png" ></td>
         <td>Arif is a senior at Colorado State University and is a Applited Computing Technology major.
             His love for computers started at a young age with coding with small video game projects. He
-            is on the Colorado State University Soccer team and plans to pursue a career in Web Design or 
+            is on the Colorado State University Soccer team and plans to pursue a career in Web Design or
             Software Development. He was born in Istanbul, Turkey and moved to San Diego when he was 6.
             Then he lived in Washington, DC and Miami. He is a huge fan of soccer, snowboarding and any
-            outdoor activities. </td>
-        <td class="link">deployment link</td>
+            outdoor activities.</td>
+        <td class="link"><a href="https://www.cs.colostate.edu:4444/~abiyik/ct310/index/hospital/home.php">Deploy</a></td>
       </tr>
     </table>
 
