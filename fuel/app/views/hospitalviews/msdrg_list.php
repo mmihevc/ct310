@@ -255,5 +255,21 @@
         });
       });
     </script>
+    <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4">
+        <nav aria-label="Page Navigation Example">
+          <ul class ="pagination justify-content-sm-center">
+            <?php
+              if( $start > 0 ){
+                $prev_path = Uri::base() . 'index.php/hospital/msdrg_list/'. max($start - 25, 0);
+                echo '<li class="page-item"><a class="page-link" href="' . $prev_path . '">Previous</a></li>';
+              }
+             ?>
+             <?php
+                 $next_path = Uri::base() . 'index.php/hospital/msdrg_list/'. ($start + 25);
+                 echo '<li class="page-item"><a class="page-link" href="' . $next_path . '">Next</a></li>';
+              ?>
+    </div>
   </body>
 </html>
