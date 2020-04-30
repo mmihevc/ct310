@@ -9,14 +9,14 @@
      )->execute()->as_array();
    }
 
-   public static function get_drgs() {
+   public static function get_drgs($from, $amount) {
      return DB::query(
-       "SELECT DISTINCT(DRG_Definition) FROM `medicare`", DB::SELECT
+       "SELECT DISTINCT(DRG_Definition) FROM `medicare` LIMIT $amount OFFSET $from ", DB::SELECT
        )->execute()->as_array();
     }
 
    public static function get_everything($hospital_id){
-     return DB::query(
+     return DB::query( 
        "SELECT DISTINCT DRG_Definition, Provider_Id, Provider_Name, Provider_Street_Address, Provider_City, Provider_State, Provider_Zip_Code, Hospital_Referral_Region_HRR_Description,Total_Discharges, Average_Covered_Charges, Average_Total_Payments, Average_Medicare_Payments FROM `medicare` WHERE Provider_Id=$hospital_id", DB::SELECT
      )->execute()->as_array();
    }
