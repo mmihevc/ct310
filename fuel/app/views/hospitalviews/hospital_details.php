@@ -31,7 +31,7 @@
                 $data = explode(' - ', $row["DRG_Definition"]);
                 $number = trim($data[0]); //number
                 $description = trim($data[1]); //description
-                $drg = Uri::base(). "index.php/hospital/drg_details.php?drg=" .$number;
+                $drg = Uri::base(). "index.php/hospital/msdrg_details.php?msdrg_id=" .$number;
                 echo "<td><a href ='$drg'>" . $number . "</a></td>";
                 echo "<td>" . $description . "</td>";
                 echo "<td>" . $row["Average_Covered_Charges"] . "</td>";
