@@ -1,3 +1,4 @@
+<?php ini_set('memory_limit', '512M'); ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -28,6 +29,21 @@
         }
       ?>
     </table>
+
+    <nav>
+     <ul class="list justify-content-sm-center">
+       <?php
+         if ($start > 0) {
+           $prev_path = Uri::base() . 'index.php/hospital/msdrg_details?start=' . max($start - 20, 0);
+           echo '<li class="page-item"><a class="page-link" href="' . $prev_path . '">Previous</a></li>';
+         }
+        ?>
+        <?php
+          $next_path = Uri::base() . 'index.php/hospital/msdrg_details?start=' . ($start + 20);
+          echo '<li class="page-item"><a class="page-link" href="' . $next_path . '">Next</a></li>';
+         ?>
+     </ul>
+   </nav>
 
   </body>
 </html>
