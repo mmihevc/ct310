@@ -32,7 +32,11 @@ class Controller_Hospital extends Controller {
     //TODO: directs you to a page listing the hospitals, it would be smart to limit the data flow using pagination or something like that...
     //https://www.myprogrammingtutorials.com/create-pagination-with-php-and-mysql.html
     //You could do something like this with a file, but you could also just load all the data into a database for easier access
-    public function action_hospital_list($start = 0) {
+    public function action_hospital_list() {
+      $start = 0;
+      if(isset($_GET["start"])) {
+        $start = $_GET["start"];
+      }
       $hospital_data = HospitalModel::get_hospitals($start, 25);
       $view = View::forge('hospitalviews/hospital_list');
       $view->contents = View::forge('hospitalviews/template');
@@ -45,8 +49,12 @@ class Controller_Hospital extends Controller {
 
     //TODO: directs you to a page listing the msdrgs, maybe do some pagination similar to the hospital list
     //Something similar to the hospital list view
-    public function action_msdrg_list($start = 0) {
-      $drg_data = HospitalModel::get_drgs($start ,25);
+    public function action_msdrg_list() {
+      $start = 0;
+      if(isset($_GET["start"])) {
+        $start = $_GET["start"];
+      }
+      $drg_data = HospitalModel::get_drgs($start, 25);
       $view = View::forge('hospitalviews/msdrg_list');
       $view->contents = View::forge('hospitalviews/template');
       $view->title = 'MSDRG List';
@@ -68,31 +76,29 @@ class Controller_Hospital extends Controller {
             return $view;
           }
           else{
-          $view = View::forge('hospitalviews/hospital_details');
-          $view->contents = View::forge('hospitalviews/template');
-          $view->title = 'Hospital Details';
-          $view->hospital_css = 'hospital.css';
-          //$view->details_data = $details_data;
-          return $view;
-        }
+            $view = View::forge('hospitalviews/hospital_details');
+            $view->contents = View::forge('hospitalviews/template');
+            $view->title = 'Hospital Details';
+            $view->hospital_css = 'hospital.css';
+            //$view->details_data = $details_data;
+            return $view;
+         }
     }
 
     //TODO: serves up a view with the details for a specific msdrg
-    public function action_msdrg_details($start = 0) {
+    public function action_msdrg_details() {
       if (isset($_GET['msdrg_id'])) {
         $msdrg_id = $_GET['msdrg_id'];
-        $details = HospitalModel::get_msdrg_details($start, 25, $msdrg_id);
+        $details = HospitalModel::get_msdrg_details(0, 25, $msdrg_id);
         $view = View::forge('hospitalviews/msdrg_details');
         $view->contents = View::forge('hospitalviews/template');
         $view->title = 'MSDRG Details';
-        $view->start = $start;
         $view->drg_data = $details;
         return $view;
       } else {
         $view = View::forge('hospitalviews/msdrg_details');
         $view->contents = View::forge('hospitalviews/template');
         $view->title = 'MSDRG Details';
-        $view->start = $start;
         return $view;
       }
 
