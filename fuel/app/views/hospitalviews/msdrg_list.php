@@ -93,11 +93,9 @@
       background-color: #bfbfbf;
       }
 
-      /* table processing indicator */
       .tablesorter-blue .tablesorter-processing {
       background-position: center center !important;
       background-repeat: no-repeat !important;
-      /* background-image: url(images/loading.gif) !important; */
       background-image: url('data:image/gif;base64,R0lGODlhFAAUAKEAAO7u7lpaWgAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQBCgACACwAAAAAFAAUAAACQZRvoIDtu1wLQUAlqKTVxqwhXIiBnDg6Y4eyx4lKW5XK7wrLeK3vbq8J2W4T4e1nMhpWrZCTt3xKZ8kgsggdJmUFACH5BAEKAAIALAcAAAALAAcAAAIUVB6ii7jajgCAuUmtovxtXnmdUAAAIfkEAQoAAgAsDQACAAcACwAAAhRUIpmHy/3gUVQAQO9NetuugCFWAAAh+QQBCgACACwNAAcABwALAAACE5QVcZjKbVo6ck2AF95m5/6BSwEAIfkEAQoAAgAsBwANAAsABwAAAhOUH3kr6QaAcSrGWe1VQl+mMUIBACH5BAEKAAIALAIADQALAAcAAAIUlICmh7ncTAgqijkruDiv7n2YUAAAIfkEAQoAAgAsAAAHAAcACwAAAhQUIGmHyedehIoqFXLKfPOAaZdWAAAh+QQFCgACACwAAAIABwALAAACFJQFcJiXb15zLYRl7cla8OtlGGgUADs=') !important;
       }
 
@@ -147,13 +145,13 @@
       -o-transition: line-height 0.1s ease;
       transition: line-height 0.1s ease;
       }
-      /* optional disabled input styling */
+
       .tablesorter-blue .tablesorter-filter-row .disabled {
       opacity: 0.5;
       filter: alpha(opacity=50);
       cursor: not-allowed;
       }
-      /* hidden filter row */
+
       .tablesorter-blue .tablesorter-filter-row.hideme td {
       padding: 2px;
       margin: 0;
@@ -166,11 +164,10 @@
       border: 0;
       padding: 0;
       margin: 0;
-      /* don't use visibility: hidden because it disables tabbing */
       opacity: 0;
       filter: alpha(opacity=0);
       }
-      /* filters */
+
       .tablesorter-blue input.tablesorter-filter,
       .tablesorter-blue select.tablesorter-filter {
       width: 98%;
@@ -188,19 +185,16 @@
       -o-transition: height 0.1s ease;
       transition: height 0.1s ease;
       }
-      /* rows hidden by filtering (needed for child rows) */
+
       .tablesorter .filtered {
       display: none;
       }
 
-      /* ajax error row */
       .tablesorter .tablesorter-errorRow td {
       text-align: center;
       cursor: pointer;
       background-color: #e6bf99;
       }
-
-
     </style>
     <script
       src="https://code.jquery.com/jquery-3.5.0.min.js"
@@ -244,32 +238,31 @@
     </div>
     </div>
 
+     <nav>
+      <ul class="list justify-content-sm-center">
+        <?php
+          if ($start > 0) {
+            $prev_path = Uri::base() . 'index.php/hospital/msdrg_list?start=' . max($start - 25, 0);
+            echo '<li class="page-item"><a class="page-link" href="' . $prev_path . '">Previous</a></li>';
+          }
+         ?>
+         <?php
+           $next_path = Uri::base() . 'index.php/hospital/msdrg_list?start=' . ($start + 25);
+           echo '<li class="page-item"><a class="page-link" href="' . $next_path . '">Next</a></li>';
+          ?>
+      </ul>
+    </nav>
+
     <script type="text/javascript">
       $(function() {
         $("#drgTable").tablesorter({
           theme: 'blue',
           widthFixed: true,
-          sortLocaleCompare: true, // needed for accented characters in the data
+          sortLocaleCompare: true,
           sortList: [ [0,1] ],
           widgets: ['zebra', 'filter']
         });
       });
     </script>
-    <div class="row">
-      <div class="col-4"></div>
-      <div class="col-4">
-        <nav aria-label="Page Navigation Example">
-          <ul class ="pagination justify-content-sm-center">
-            <?php
-              if( $start > 0 ){
-                $prev_path = Uri::base() . 'index.php/hospital/msdrg_list/'. max($start - 25, 0);
-                echo '<li class="page-item"><a class="page-link" href="' . $prev_path . '">Previous</a></li>';
-              }
-             ?>
-             <?php
-                 $next_path = Uri::base() . 'index.php/hospital/msdrg_list/'. ($start + 25);
-                 echo '<li class="page-item"><a class="page-link" href="' . $next_path . '">Next</a></li>';
-              ?>
-    </div>
   </body>
 </html>
