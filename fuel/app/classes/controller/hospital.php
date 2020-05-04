@@ -37,7 +37,7 @@ class Controller_Hospital extends Controller {
       if(isset($_GET["start"])) {
         $start = $_GET["start"];
       }
-      $hospital_data = HospitalModel::get_hospitals($start, 25);
+      $hospital_data = HospitalModel::get_hospitals($start, 20);
       $view = View::forge('hospitalviews/hospital_list');
       $view->contents = View::forge('hospitalviews/template');
       $view->title = 'Hospital List';
@@ -54,7 +54,7 @@ class Controller_Hospital extends Controller {
       if(isset($_GET["start"])) {
         $start = $_GET["start"];
       }
-      $drg_data = HospitalModel::get_drgs($start, 25);
+      $drg_data = HospitalModel::get_drgs($start, 20);
       $view = View::forge('hospitalviews/msdrg_list');
       $view->contents = View::forge('hospitalviews/template');
       $view->title = 'MSDRG List';
@@ -65,14 +65,19 @@ class Controller_Hospital extends Controller {
 
     //TODO: serves up the view with the details for a specific hospital
     public function action_hospital_details() {
+      $start = 0;
+      if(isset($_GET["start"])) {
+        $start = $_GET["start"];
+      }
         if(isset($_GET["hospital_id"])){
             $hospital_id = $_GET["hospital_id"];
-            $everything_data = HospitalModel::get_everything($hospital_id);
+            $everything_data = HospitalModel::get_everything(0, 20, $hospital_id);
             $view = View::forge('hospitalviews/hospital_details');
             $view->contents = View::forge('hospitalviews/template');
             $view->title = 'Hospital Details';
             $view->hospital_css = 'hospital.css';
             $view->everything_data = $everything_data;
+            $view->start = $start;
             return $view;
           }
           else{
@@ -80,25 +85,31 @@ class Controller_Hospital extends Controller {
             $view->contents = View::forge('hospitalviews/template');
             $view->title = 'Hospital Details';
             $view->hospital_css = 'hospital.css';
-            //$view->details_data = $details_data;
+            $view->start = $start;
             return $view;
          }
     }
 
     //TODO: serves up a view with the details for a specific msdrg
     public function action_msdrg_details() {
+      $start = 0;
+      if(isset($_GET["start"])) {
+        $start = $_GET["start"];
+      }
       if (isset($_GET['msdrg_id'])) {
         $msdrg_id = $_GET['msdrg_id'];
-        $details = HospitalModel::get_msdrg_details(0, 25, $msdrg_id);
+        $details = HospitalModel::get_msdrg_details(0, 20, $msdrg_id);
         $view = View::forge('hospitalviews/msdrg_details');
         $view->contents = View::forge('hospitalviews/template');
         $view->title = 'MSDRG Details';
         $view->drg_data = $details;
+        $view->start = $start;
         return $view;
       } else {
         $view = View::forge('hospitalviews/msdrg_details');
         $view->contents = View::forge('hospitalviews/template');
         $view->title = 'MSDRG Details';
+        $view->start = $start;
         return $view;
       }
 
