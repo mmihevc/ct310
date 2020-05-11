@@ -111,6 +111,7 @@ class Controller_Hospital extends Controller {
         $view->title = 'MSDRG Details';
         $view->start = $start;
         return $view;
+          
       }
 
     }
@@ -139,6 +140,23 @@ class Controller_Hospital extends Controller {
                 
         }
         return Response::redirect('index.php/310hospital/hospital_details/' . Input::post('provider-id'));
+    }
+    public function post_updatevotes() {
+        $vote = 0;
+        if (Input::post('method') == 'upvote') {
+            $votes = CT310HospitalModel::increment_votes(Input::post('comment_id'));
+            
+        } else {
+            $votes = CT310HospitalModel::decrement_votes(Input::post('comment_id'));
+            
+            
+            
+        }
+        return Response::forge(
+        json_encode(array(
+            "id" => Input::post('comment_id'),
+            "votes" => $votes
+        )))
     }
     
 }
